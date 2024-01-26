@@ -6,7 +6,7 @@ from influxdb_client import InfluxDBClient
 from influxdb_client.client.write_api import SYNCHRONOUS
 
 try:
-    OWM_SECRET = os.environ["OWN_SECRET"]
+    OWM_SECRET = os.environ["OWM_SECRET"]
 except KeyError:
     OWM_SECRET = "Token not available!"
 
