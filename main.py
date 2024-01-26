@@ -17,7 +17,7 @@ except KeyError:
 bucket = "myWeather"
 org = "test" # or email you used to create your Free Tier InfluxDB Cloud account
 token = INFLUXDB_SECRET
-url = "https://us-east-1-1.aws.cloud2.influxdata.com/" # for example, https://us-east-1.aws.cloud2.influxdata.com/
+url = "https://us-east-1-1.aws.cloud2.influxdata.com/" # for example, https://us-east-1-1.aws.cloud2.influxdata.com/
 openWeatherMap_token = OWM_SECRET
 openWeatherMap_lat = "54.607868"
 openWeatherMap_lon = "-5.926437"
