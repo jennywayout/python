@@ -4,11 +4,21 @@ import pandas as pd
 from influxdb_client import InfluxDBClient
 from influxdb_client.client.write_api import SYNCHRONOUS
 
+try:
+    OWM_SECRET = os.environ["OWM_SECRET"]
+except KeyError:
+    OWM_SECRET = "Token not available!"
+
+try:
+    INFLUXDB_SECRET = os.environ["OWM_SECRET"]
+except KeyError:
+    INFLUXDB_SECRET = "Token not available!"
+
 bucket = "myWeather"
 org = "test" # or email you used to create your Free Tier InfluxDB Cloud account
-token = "Ns6HwdKNaNsmVcuS819LHDQWXdEWZumV2_UqDAGBlWQyHTaHtfpD-Kj1ho3hJ1vMO8gpL4BYW698WnehwTPaxQ=="
+token = INFLUXDB_SECRET
 url = "https://us-east-1-1.aws.cloud2.influxdata.com/" # for example, https://us-east-1.aws.cloud2.influxdata.com/
-openWeatherMap_token = "d46ed8ef358bbe73af3d90da3c7845e7"
+openWeatherMap_token = OWM_SECRET
 openWeatherMap_lat = "54.607868"
 openWeatherMap_lon = "-5.926437"
 openWeather_url = "https://api.openweathermap.org/data/3.0/onecall"
