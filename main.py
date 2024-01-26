@@ -5,12 +5,12 @@ from influxdb_client import InfluxDBClient
 from influxdb_client.client.write_api import SYNCHRONOUS
 
 try:
-    OWM_SECRET = os.environ["OWM_SECRET"]
+    OWM_SECRET = ${{ secrets.OWM_SECRET }}
 except KeyError:
     OWM_SECRET = "Token not available!"
 
 try:
-    INFLUXDB_SECRET = os.environ["OWM_SECRET"]
+    INFLUXDB_SECRET = ${{ secrets.INFLUXDB_SECRET }}
 except KeyError:
     INFLUXDB_SECRET = "Token not available!"
 
