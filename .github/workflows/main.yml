@@ -25,7 +25,7 @@ jobs:
       - name: execute py script # run main.py
         env:
           OWM_SECRET: ${{ secrets.OWM_SECRET }}
-          INFLUXDB_SECRET: ${{ secrets.OWM_SECRET }}
+          INFLUXDB_SECRET: ${{ secrets.INFLUXDB_SECRET }}
 
         run: python main.py
           
