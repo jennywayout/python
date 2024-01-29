@@ -25,7 +25,7 @@ openWeatherMap_lon = "-5.926437"
 openWeather_url = "https://api.openweathermap.org/data/3.0/onecall"
 
 # Get time series data from OpenWeatherMap API
-params = {'lat':openWeatherMap_lat, 'lon':openWeatherMap_lon, 'exclude': "minutely,daily", 'appid':openWeatherMap_token}
+params = {'lat':openWeatherMap_lat, 'lon':openWeatherMap_lon, 'exclude': "minutely,daily", 'units': 'metric','appid':openWeatherMap_token}
 r = requests.get(openWeather_url, params = params).json()
 
 hourly = r['hourly']
