@@ -15,7 +15,7 @@ try:
 except KeyError:
     INFLUXDB_SECRET = "Token not available!"
 
-bucket = "myWeather"
+bucket = "belfast_weather"
 org = "test" # or email you used to create your Free Tier InfluxDB Cloud account
 token = INFLUXDB_SECRET
 url = "https://us-east-1-1.aws.cloud2.influxdata.com/" # for example, https://us-east-1-1.aws.cloud2.influxdata.com/
